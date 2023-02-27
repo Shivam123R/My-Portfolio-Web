@@ -1,0 +1,141 @@
+.project-card {
+    width: 40%;
+    height: calc(100% - 0%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    margin-inline: auto;
+    background-color: #fff;
+    --primary-color: #2c3e50;
+    --secondary-color: #bdc3c7;
+    border-radius: 10px;
+    padding: 20px 20px;
+    transition: .2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card .images::-webkit-scrollbar {
+    display: none;
+}
+
+.project-card .images {
+    height: 220px;
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+    overflow-x: scroll;
+    border-radius: 10px;
+    transition: .2s linear;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.project-card .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-card p {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: 550;
+}
+
+.project-card p span {
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+
+.project-card p span a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 2px 8px;
+    transition: .2s ease-in-out;
+}
+
+.project-card p span a:focus {
+    outline: none;
+}
+
+.project-card p span a:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.project-card::before {
+    content: ' ';
+    position: absolute;
+    width: 91%;
+    height: 220px;
+    right: 0%;
+    top: 0%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    margin: 20px 20px;
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    opacity: 0;
+}
+
+.project-card:hover::before {
+    opacity: 0.2;
+}
+
+@media screen and (min-width:2560px) {
+    .project-card {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:1920px) and (max-width:2559px) {
+    .project-card {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:1279px) and (max-width:1919px) {
+    .project-card {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width:800px)and (max-width:1278px) {
+    .project-card {
+        width: 80%;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:300px)and (max-width:799px) {
+
+    .project-card {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:401px)and (max-width:500px) {
+    .project-card::before {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:300px)and (max-width:400px) {
+    .project-card::before {
+        width: 87%;
+    }
+}
